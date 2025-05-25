@@ -13,7 +13,7 @@ This project is an end-to-end solution for real-time recognition and automatic i
   2. Detect and classify the sequence of characters inside the white boxes,
   3. Construct the string in left-to-right order,
   4. Automatically type the recognized string into the input field,
-  5. Complete the entire process in under 5-6 seconds.
+  5. Complete the entire process in under 5 seconds.
 
 ---
 
@@ -65,7 +65,7 @@ This project is an end-to-end solution for real-time recognition and automatic i
    - Characters are concatenated to form the final string.
 
 5. **Auto-Typing:**
-   - The recognized string is automatically typed into the game window using pyautogui.write() or similar.
+   - The recognized string is automatically typed into the game window using pynput.
 
 ---
 
@@ -73,7 +73,7 @@ This project is an end-to-end solution for real-time recognition and automatic i
 
 - **Hotkey Trigger:** Press a designated hotkey (e.g., F8, or a custom key combination) to start the process.
 - **End-to-End Flow:** Screenshot → Crop & Detect → Classify → String → Auto-Type
-- **Runs entirely within 5-6 seconds**, suitable for fast-paced live gaming.
+- **Runs entirely within couple of seconds**, suitable for fast-paced live gaming.
 
 ### Example Usage
 
@@ -83,19 +83,11 @@ This project is an end-to-end solution for real-time recognition and automatic i
 pip install tensorflow opencv-python pyautogui pynput
 
 # Run the main automation script
-python auto_typing.py
+python autotypeGUI.py
 
 
 - The script will listen for the hotkey and perform Object detection + auto-typing when triggered.
 
----
-
-## File Structure
-
-- `classify_box.py` — Main inference and classification script.
-- `auto_typing.py` — Automation script for hotkey triggering and auto-typing.
-- `charbox_cnn_lightaug.h5` — Trained CNN model weights.
-- `README.md` — This documentation.
 
 ---
 
