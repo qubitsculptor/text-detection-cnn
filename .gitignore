@@ -1,0 +1,28 @@
+cat > .gitignore <<EOF
+# Virtual env
+charenv310/
+
+# Data
+data/
+*.csv
+*.json
+*.h5
+*.pkl
+*.xlsx
+
+# Datasets
+labeled_boxes/
+light_augmented_dataset/
+
+# Media
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mov
+
+# IDE
+.vscode/
+.DS_Store
+EOF
